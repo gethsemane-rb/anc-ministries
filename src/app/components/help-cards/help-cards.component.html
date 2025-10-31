@@ -1,0 +1,16 @@
+<section class="help container" >
+  <div class="help-section">
+    <h6 style="text-align: center;">How can we help today ?</h6>
+
+    <div class="help-cards">
+      <div
+        class="help-card"
+        *ngFor="let help of helpOptions"
+        (click)="onHelpClick(help.action)">
+        <span class="icon">{{ help.icon }}</span>
+        <p>{{ help.label }}</p>
+      </div>
+    </div>
+  </div>
+
+</section>

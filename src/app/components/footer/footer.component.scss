@@ -1,0 +1,62 @@
+.site-footer {
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-top {
+  background: #e6edf3;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  color: #222;
+}
+
+.footer-section {
+  text-align: left;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-section h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #000;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0078ff;
+}
+
+.footer-bottom {
+  background: #1c1c1c;
+  text-align: center;
+  color: #fff;
+  padding: 12px 0;
+  font-size: 13px;
+}

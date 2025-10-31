@@ -1,0 +1,54 @@
+.pastor-section {
+  background: url('/assets/images/church_bg.png') center/cover no-repeat;
+  padding: 60px 40px;
+  color: #333;
+  background-position: bottom;
+}
+
+.pastor-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 75px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pastor-img {
+  flex: 0 0 180px;
+  text-align: center;
+  margin-right: 30px;
+}
+
+.pastor-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #ffcdc8;
+  object-fit: cover;
+}
+
+.pastor-text {
+  flex: 1;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.intro {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .pastor-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .pastor-img {
+    margin: 0 0 20px 0;
+  }
+}
+

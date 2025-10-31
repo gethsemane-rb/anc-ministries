@@ -1,0 +1,8 @@
+.livestreams { padding: 32px 0; .section-header h3{ margin:0 0 12px 0; }
+  .cards { display:flex; gap:18px; }
+  .card { width:220px; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.06);}
+  .thumb { position:relative; height:120px; img{ width:100%; height:100%; object-fit:cover; }
+  .duration{ position:absolute; right:8px; bottom:8px; background:rgba(0,0,0,0.6); color:#fff; padding:4px 8px; border-radius:6px; font-size:12px;}
+  .live{ position:absolute; left:8px; bottom:8px; background:#d9534f; color:#fff; padding:4px 8px; border-radius:6px; font-size:12px;}}
+  .meta { padding:10px; h4{ margin:0; font-size:14px; } }
+}

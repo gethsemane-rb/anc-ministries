@@ -1,0 +1,33 @@
+<div class="p-4">
+  <div *ngIf="loading" class="text-gray-500">Loading streams...</div>
+
+  <div *ngIf="!loading && videos.length === 0" class="text-gray-500">
+    No live or recent streams found.
+  </div>
+
+  <!-- Horizontal scrollable container -->
+  <div
+    *ngIf="!loading && videos.length > 0"
+    style="display:flex;column-gap: 50px;"
+  >
+    <div
+      *ngFor="let vid of videos"
+      class="cursor-pointer hover:scale-105 transition-transform duration-200"
+    >
+<!--      <iframe-->
+<!--        class="w-full aspect-video rounded-t-xl"-->
+<!--        [src]="vid.embedUrl"-->
+<!--        frameborder="0"-->
+<!--        allowfullscreen-->
+<!--      ></iframe>-->
+      <img
+        [src]="vid.thumbnail"
+        alt="{{ vid.title }}"
+        class="w-full rounded-t-xl"
+        (click)="openVideo(vid.videoId)"
+        style="border-radius: 20px;cursor:pointer;"
+      />
+      <div class="p-2 font-semibold text-gray-800" style="width: min-content;min-width: 88%;">{{ vid.title }}</div>
+    </div>
+  </div>
+</div>
