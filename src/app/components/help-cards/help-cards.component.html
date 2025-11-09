@@ -1,15 +1,14 @@
 <section class="help container" >
-  <div class="help-section">
-    <h6 style="text-align: center;">How can we help today ?</h6>
+  <div class="pray-card">
+    <h2>How can we pray for you?</h2>
+    <p>
+      We know you have a lot on your mind. Remember, God is always here for you!
+      Whatever you are concerned about—we are here to pray with you!
+    </p>
 
-    <div class="help-cards">
-      <div
-        class="help-card"
-        *ngFor="let help of helpOptions"
-        (click)="onHelpClick(help.action)">
-        <span class="icon">{{ help.icon }}</span>
-        <p>{{ help.label }}</p>
-      </div>
+    <div class="button-group">
+      <button class="btn purple">Request Prayer</button>
+      <button class="btn purple">Know Jesus</button>
     </div>
   </div>
 
