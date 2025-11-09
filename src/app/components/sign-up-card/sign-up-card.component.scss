@@ -1,0 +1,71 @@
+.card {
+  background: #e7d3cf;
+  padding: 25px;
+  border-radius: 12px;
+  width: 60%;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+
+  h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .desc {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .form-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+
+    input {
+      width: 50%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+  }
+
+  input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .verify {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .captcha {
+    background: #fff;
+    padding: 10px;
+    height: 70px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    border-radius: 4px;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .subscribe {
+    background: #b78f83;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 600;
+  }
+}

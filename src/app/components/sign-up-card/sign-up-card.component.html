@@ -1,0 +1,23 @@
+<div class="card">
+  <h2>Let's get connected</h2>
+  <p class="desc">
+      Receive weekly notification and encouragement from Ps Joshua and his team.
+  </p>
+
+  <div class="form-group">
+    <input type="text" placeholder="First Name" [(ngModel)]="firstName" />
+    <input type="text" placeholder="Last Name" [(ngModel)]="lastName" />
+  </div>
+
+  <input type="email" placeholder="Email Address" [(ngModel)]="email" />
+
+  <p class="verify">Address</p>
+
+  <div class="form-group">
+    <input type="text" placeholder="State" [(ngModel)]="lastName" />
+    <input type="text" placeholder="Age" [(ngModel)]="lastName" />
+
+  </div>
+
+  <button class="subscribe" (click)="submitForm()">Sign up</button>
+</div>

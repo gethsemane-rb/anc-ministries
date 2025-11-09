@@ -12,12 +12,21 @@
     </button>
 
     <nav class="nav"  [class.open]="menuOpen">
-      <a (click)="closeMenu()">Home</a>
-      <a (click)="closeMenu()">Discipleship</a>
-      <a (click)="closeMenu()">Live</a>
-      <a (click)="closeMenu()">Choirs</a>
-      <a (click)="closeMenu()">Testimony</a>
-<!--      <a class="donate">Donate</a>-->
+      <a  [routerLink]="['/home']"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()">Home</a>
+
+      <a  [routerLink]="['/live']" routerLinkActive="active" (click)="closeMenu()">Live</a>
+
+      <a  [routerLink]="['/location']" routerLinkActive="active" (click)="closeMenu()">Location</a>
+
+      <a  [routerLink]="['/give']" routerLinkActive="active" (click)="closeMenu()">Offerings</a>
+
+      <a  [routerLink]="['/about-us']" routerLinkActive="active" >About us</a>
+
+      <div class="active-bg" #activeBg></div>
+
     </nav>
 
 
