@@ -1,22 +1,48 @@
-<div class="timings-card">
-  <div class="header">
-    <span class="icon">⛪</span>
-    <div style="font-size:14px;">Service Timings</div>
+<div class="carousel-container">
+
+  <!-- Sliding wrapper -->
+  <div class="slider" [style.transform]="'translateX(-' + currentSlide * 100 + '%)'">
+
+    <!-- Dynamic slides -->
+    <div class="slide" *ngFor="let slideIndex of [].constructor(totalSlides); let i = index">
+
+      <div class="tile-row">
+
+        <!-- Group tiles dynamically -->
+        <ng-container *ngFor="let tile of tiles.slice(i * tilesPerSlide, (i + 1) * tilesPerSlide); let ti = index">
+
+          <div class="tile glass"
+               #t
+               (mousemove)="tilt($event, t)"
+               (mouseleave)="reset(t)">
+
+            <img [src]="tile.image" alt="img" />
+
+            <h3>{{ tile.title }}</h3>
+            <p>{{ tile.time }}</p>
+
+<!--            <button class="remove-btn"-->
+<!--                    (click)="removeTile(i * tilesPerSlide + ti)">✖</button>-->
+          </div>
+
+        </ng-container>
+
+      </div>
+    </div>
+
   </div>
 
-  <div class="timing">
-    <div>Sunday</div>
-    <p>English–Tamil&nbsp;&nbsp;07:30 AM – 9:30 AM</p>
-    <p>English–Telugu&nbsp;&nbsp;07:30 AM – 9:30 AM</p>
+  <!-- Arrows -->
+  <button class="arrow left" (click)="prevSlide()">❮</button>
+  <button class="arrow right" (click)="nextSlide()">❯</button>
+
+  <!-- dots -->
+  <div class="dots">
+    <span *ngFor="let d of [].constructor(totalSlides); let i = index"
+          class="dot"
+          [class.active]="i === currentSlide"
+          (click)="goToSlide(i)"></span>
   </div>
 
-  <div class="timing">
-    <div>Tuesday</div>
-    <p>Women’s Fellowship  07:30 AM – 9:30 AM</p>
-  </div>
 
-  <div class="timing">
-    <div>Friday</div>
-    <p>Special Service  07:30 PM – 9:30 AM</p>
-  </div>
 </div>

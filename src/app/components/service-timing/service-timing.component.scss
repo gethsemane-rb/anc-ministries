@@ -1,36 +1,124 @@
-.timings-card {
-  width: 280px;
-  background: #fff;
-  border-radius: 16px;
-  border: 1px solid #e7e7e7;
-  padding: 20px;
+.controls {
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-.header {
+.controls button {
+  padding: 6px 14px;
+  margin: 5px;
+  border-radius: 8px;
+  border: none;
+  background: #6200ea;
+  color: white;
+  cursor: pointer;
+}
+
+.carousel-container {
+  position: relative;
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+  padding-bottom: 25px;
+}
+
+.slider {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 8px;
-  margin-bottom: 8px;
+  transition: transform 0.6s ease;
 }
 
-.icon {
-  font-size: 20px;
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
 }
-.timing {
-  text-align:center;
+
+.tile-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
 }
-.timing div {
-  display: block;
-  margin-top: 20px;
+
+.tile {
+  width: 300px;
+  height: 350px;
+  border-radius: 20px;
+  padding: 15px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.12);
+  cursor: pointer;
+  text-align: center;
+  transition: 0.25s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.tile img {
+  width: 100%;
+  height: 170px;
+  border-radius: 15px;
+  object-fit: cover;
   margin-bottom: 10px;
-  color: #111;
-  font-size: 14px;
 }
 
-.timing p {
-  margin: 0;
-  font-size: 10px;
-  color: #333;
+.remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(200,0,0,0.8);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(10px);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.left { left: 12px; }
+.right { right: 12px; }
+
+.dots {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 4px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #ff1744;
+}
+
+.add-box {
+  text-align: center;
+  margin-top: 22px;
+}
+
+.add-btn {
+  padding: 10px 18px;
+  background: #009688;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }

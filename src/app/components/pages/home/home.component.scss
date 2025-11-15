@@ -1,0 +1,97 @@
+/* ---------------------------
+   HERO + VIDEO STYLE (unchanged)
+----------------------------*/
+.hero {
+  height: 620px;
+  background: url('/assets/ANC 2.png') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: 60px solid #dbe0e7;
+}
+
+.headervideo {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* ---------------------------
+   MAIN STREAM SECTION
+----------------------------*/
+.stream-layout {
+  width: 95%;
+  max-width: 1300px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* left and right stack on mobile */
+.left-section,
+.right-section {
+  width: 100%;
+}
+
+/* right section items stack */
+.right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* ---------------------------
+   TABLET VIEW
+----------------------------*/
+@media (min-width: 768px) {
+  .stream-layout {
+    flex-direction: row;
+    gap: 35px;
+    justify-content: center;
+  }
+
+  .left-section {
+    flex: 2;
+  }
+
+  .right-section {
+    flex: 1;
+  }
+}
+
+/* ---------------------------
+   DESKTOP VIEW
+----------------------------*/
+@media (min-width: 1024px) {
+  .stream-layout {
+    width: 85%;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  .right-section {
+    gap: 35px;
+  }
+}
+
+/* ---------------------------
+   SPACER
+----------------------------*/
+.spacer {
+  height: 60px;
+}
+
+@media (max-width: 768px) {
+  .spacer {
+    height: 25px;
+  }
+}

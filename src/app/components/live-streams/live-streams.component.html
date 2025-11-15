@@ -1,33 +1,47 @@
-<div class="p-4">
-  <div *ngIf="loading" class="text-gray-500">Loading streams...</div>
+<!--<section class="section">-->
+<!--  <div class="container row">-->
+<!--    <div class="streams-grid card" *ngFor="let vid of videos">-->
 
-  <div *ngIf="!loading && videos.length === 0" class="text-gray-500">
-    No live or recent streams found.
-  </div>
+<!--      <div class="livestream card" style="margin-top:12px">-->
+<!--        <img class="thumb"-->
+<!--            [src]="vid.thumbnail"-->
+<!--            alt="{{ vid.title }}"-->
+<!--            class="stream-thumb"-->
+<!--            (click)="openVideo(vid.videoId)"-->
+<!--            />-->
+<!--        <div class="meta">-->
+<!--          <div class="badge-live">🔴 LIVE</div>-->
+<!--          <div class="muted">{{ vid.title }}</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
 
-  <!-- Horizontal scrollable container -->
-  <div
-    *ngIf="!loading && videos.length > 0"
-    style="display:flex;column-gap: 50px;"
-  >
-    <div
-      *ngFor="let vid of videos"
-      class="cursor-pointer hover:scale-105 transition-transform duration-200"
-    >
-<!--      <iframe-->
-<!--        class="w-full aspect-video rounded-t-xl"-->
-<!--        [src]="vid.embedUrl"-->
-<!--        frameborder="0"-->
-<!--        allowfullscreen-->
-<!--      ></iframe>-->
-      <img
-        [src]="vid.thumbnail"
-        alt="{{ vid.title }}"
-        class="w-full rounded-t-xl"
-        (click)="openVideo(vid.videoId)"
-        style="border-radius: 20px;cursor:pointer;"
-      />
-      <div class="p-2 font-semibold text-gray-800" style="width: min-content;min-width: 88%;">{{ vid.title }}</div>
+
+<!--  </div>-->
+<!--</section>-->
+
+
+
+<section class="section">
+  <div class="streams-grid">
+    <div class="stream-card  livestream card"  *ngFor="let vid of videos">
+        <img class="thumb"
+          [src]="vid.thumbnail"
+          alt="{{ vid.title }}"
+          class="stream-thumb"
+          (click)="openVideo(vid.videoId)"
+        />
+      <div class="meta">
+          <div class="badge-live">🔴 LIVE</div>
+          <span>{{ cleanTitle(vid.title) }}</span>
+      </div>
     </div>
+
   </div>
-</div>
+
+  <div class="view-more">
+    <p>View more</p>
+    <i class="arrow down"></i>
+  </div>
+</section>
+
