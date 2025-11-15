@@ -42,6 +42,8 @@ export class LiveStreamsComponent implements OnInit {
     console.log(videoId)
     window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
   }
-
+  cleanTitle(t: string) {
+    return t.replace(/[^\w\s|:-]/g, '').trim();
+  }
 
 }

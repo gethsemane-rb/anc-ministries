@@ -1,12 +1,12 @@
+/* =============== BASE SECTION =============== */
 .ministries-section {
   position: relative;
   background: url('/assets/images/workship_bg.png') center/cover no-repeat;
-  color: #1e1e1e;
   padding: 60px 0;
-  bottom: 20rem;
-  top:10px;
+  color: #1e1e1e;
 }
 
+/* Overlay */
 .overlay {
   position: absolute;
   inset: 0;
@@ -14,10 +14,11 @@
   z-index: 0;
 }
 
+/* Container */
 .container {
   position: relative;
   z-index: 2;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -28,28 +29,32 @@
   margin-bottom: 40px;
 }
 
+/* =============== CARD =============== */
 .ministries-card {
   background: #f9f8ff;
   border-radius: 25px;
   padding: 40px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 80%;
 }
 
+/* =============== ROWS =============== */
 .ministry-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
-  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .ministry-row.reverse {
   flex-direction: row-reverse;
 }
 
+/* =============== TEXT =============== */
 .ministry-text {
-  flex: 1 1 45%;
-  padding: 20px;
+  flex: 1;
 }
 
 .ministry-text h3 {
@@ -64,8 +69,9 @@
   line-height: 1.6;
 }
 
+/* =============== IMAGES =============== */
 .ministry-image {
-  flex: 1 1 45%;
+  flex: 1;
   text-align: center;
 }
 
@@ -76,6 +82,7 @@
   object-fit: cover;
 }
 
+/* Button */
 .btn {
   background: #2b1462;
   color: #fff;
@@ -90,15 +97,39 @@
   background: #3c1b85;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .ministry-row {
-    flex-direction: column;
-    text-align: center;
+/* =============== RESPONSIVE =============== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .ministries-card {
+    padding: 30px;
   }
 
+  .ministry-row {
+    gap: 20px;
+  }
+
+  .container {
+    left: 0 !important;
+    bottom: 0 !important;
+    max-height: unset !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .ministries-section {
+    padding: 40px 0;
+  }
+
+  .ministries-card {
+    padding: 25px;
+  }
+
+  .ministry-row,
   .ministry-row.reverse {
     flex-direction: column;
+    text-align: center;
   }
 
   .ministry-text,
@@ -107,6 +138,29 @@
   }
 
   .ministry-image img {
+    max-width: 280px;
     margin-top: 15px;
+  }
+
+  /* Fix weird manual inline positioning */
+  .container {
+    left: 0 !important;
+    bottom: 0 !important;
+    top: 0 !important;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .ministries-card {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    padding: 8px 18px;
   }
 }

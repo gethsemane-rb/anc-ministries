@@ -1,38 +1,48 @@
-<!-- schedule.component.html -->
-<div class="schedule-container">
-  <div class="day">
-    <div class="day-name">Sunday</div>
-    <div class="session">
-      <div class="session-name">Tamil & Kannada</div>
-      <div class="session-time">8 AM</div>
+<div class="carousel-container">
+
+  <!-- Sliding wrapper -->
+  <div class="slider" [style.transform]="'translateX(-' + currentSlide * 100 + '%)'">
+
+    <!-- Dynamic slides -->
+    <div class="slide" *ngFor="let slideIndex of [].constructor(totalSlides); let i = index">
+
+      <div class="tile-row">
+
+        <!-- Group tiles dynamically -->
+        <ng-container *ngFor="let tile of tiles.slice(i * tilesPerSlide, (i + 1) * tilesPerSlide); let ti = index">
+
+          <div class="tile glass"
+               #t
+               (mousemove)="tilt($event, t)"
+               (mouseleave)="reset(t)">
+
+            <img [src]="tile.image" alt="img" />
+
+            <h3>{{ tile.title }}</h3>
+            <p>{{ tile.time }}</p>
+
+<!--            <button class="remove-btn"-->
+<!--                    (click)="removeTile(i * tilesPerSlide + ti)">✖</button>-->
+          </div>
+
+        </ng-container>
+
+      </div>
     </div>
-    <div class="session">
-      <div class="session-name">English & Telugu</div>
-      <div class="session-time">10 AM</div>
-    </div>
+
   </div>
 
-  <div class="day">
-    <div class="day-name">Wednesday</div>
-    <div class="session">
-      <div class="session-name">Women's Fellowship</div>
-      <div class="session-time">10 AM</div>
-    </div>
+  <!-- Arrows -->
+  <button class="arrow left" (click)="prevSlide()">❮</button>
+  <button class="arrow right" (click)="nextSlide()">❯</button>
+
+  <!-- dots -->
+  <div class="dots">
+    <span *ngFor="let d of [].constructor(totalSlides); let i = index"
+          class="dot"
+          [class.active]="i === currentSlide"
+          (click)="goToSlide(i)"></span>
   </div>
 
-  <div class="day">
-    <div class="day-name">Friday</div>
-    <div class="session">
-      <div class="session-name">Fasting prayer</div>
-      <div class="session-time">07:30 PM</div>
-    </div>
-  </div>
 
-  <div class="day">
-    <div class="day-name">Saturday</div>
-    <div class="session">
-      <div class="session-name">Youth meeting</div>
-      <div class="session-time">05:30 PM</div>
-    </div>
-  </div>
 </div>

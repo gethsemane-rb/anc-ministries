@@ -1,9 +1,9 @@
 .card {
-  background: #e7d3cf;
+  background: #d0cfe7;
   padding: 25px;
   border-radius: 12px;
-  width: 60%;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+  width: max-content;
 
   h2 {
     font-size: 22px;
@@ -59,7 +59,7 @@
   }
 
   .subscribe {
-    background: #b78f83;
+    background: #8583b7;
     color: white;
     padding: 10px 20px;
     border: none;
