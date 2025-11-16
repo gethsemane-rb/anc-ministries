@@ -30,7 +30,8 @@
                 "glob": "**/*",
                 "input": "public"
               },
-              "src/assets"
+              "src/assets",
+              "src/assets/css/bootstrap.min.css"
             ],
             "styles": [
               "src/styles.scss"
