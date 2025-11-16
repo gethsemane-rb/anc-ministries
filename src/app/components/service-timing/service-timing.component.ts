@@ -20,11 +20,13 @@ export class  ServiceTimingComponent {
   tilesPerSlide = 3;
 
   tiles= [
-    { title: 'Sunday Service', time: '9:30 AM', image: 'assets/images/schedule/sunday.png' },
-    { title: 'Sunday school', time: '10:00 AM', image: 'assets/images/schedule/sunday_school.png' },
-    { title: 'Youth Fellowship', time: '5:00 PM', image: 'assets/images/schedule/tuesday.png' },
-    { title: 'Fasting Prayer', time: '6:00 AM', image: 'assets/images/schedule/fasting.png' },
-    { title: 'Bible Study', time: '7:00 PM', image: 'assets/images/schedule/bible_study.png' }
+    { title: 'Tamil-Kannada Service',day: 'Sunday', time: '9:30 AM', image: 'assets/images/schedule/anc_church.jpg' },
+    { title: 'Sunday school',day: 'Sunday', time: '10:00 AM', image: 'assets/images/schedule/sunday_school.png' },
+    { title: 'Telugu-English Service',day: 'Sunday', time: '9:30 AM', image: 'assets/images/schedule/church.png' },
+    { title: 'Bible Study',day: 'Wednesday', time: '7:00 PM', image: 'assets/images/schedule/bible_study.png' },
+    { title: 'Fasting Prayer',day: 'Friday', time: '6:00 AM', image: 'assets/images/schedule/fasting.png' },
+        { title: 'Youth Fellowship',day: 'Saturday', time: '5:00 PM', image: 'assets/images/schedule/tuesday.png' }
+
   ];
 
   currentSlide = 0;
@@ -52,6 +54,7 @@ export class  ServiceTimingComponent {
       this.tiles.push({
         title: 'New Service',
         time: '10:00 AM',
+        day: '10:00 AM',
         image: 'assets/schedule/default.jpg'
       });
     }

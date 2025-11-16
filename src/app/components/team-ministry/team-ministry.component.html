@@ -1,1 +1,14 @@
-<p>team-ministry works!</p>
+<section class="ministries-wrapper">
+  <h2 class="title">T E A M</h2>
+
+  <div class="cards">
+    <div class="card" *ngFor="let member of ministries">
+      <div class="image-wrap">
+        <img [src]="member.image" [alt]="member.name" />
+      </div>
+
+      <h3 class="name">{{ member.name }}</h3>
+      <p class="role">{{ member.role }}</p>
+    </div>
+  </div>
+</section>
