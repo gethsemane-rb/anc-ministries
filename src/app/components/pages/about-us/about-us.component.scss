@@ -77,7 +77,7 @@
 
 .ministry-image img {
   width: 100%;
-  max-width: 380px;
+  max-width: 12rem;
   border-radius: 25px;
   object-fit: cover;
 }
@@ -138,7 +138,7 @@
   }
 
   .ministry-image img {
-    max-width: 280px;
+    max-width: 9rem;
     margin-top: 15px;
   }
 
@@ -149,6 +149,8 @@
     top: 0 !important;
   }
 }
+
+
 
 /* Small Mobile */
 @media (max-width: 480px) {
