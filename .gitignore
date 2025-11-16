@@ -42,6 +42,4 @@ testem.log
 /typings
 
 # System files
-.DS_Store
-Thumbs.db
-/assets/
+.DS_Store/assets/

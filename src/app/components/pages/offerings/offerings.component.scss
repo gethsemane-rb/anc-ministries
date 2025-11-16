@@ -1,0 +1,108 @@
+.offering-section {
+  width: 100%;
+  position: relative;
+  margin-bottom: 8rem;
+}
+
+/* === TOP BACKGROUND === */
+.offering-bg {
+  width: 100%;
+  height: 300px;
+  background: url('/assets/images/worship_bg.jpg') center/cover no-repeat;
+  filter: brightness(0.4);
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+}
+
+/* === WHITE CARD === */
+.offering-card {
+  width: 85%;
+  background: #ffffff;
+  margin: -140px auto 0 auto;
+  border-radius: 150px 150px 0 0;
+  padding: 80px 60px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+.offering-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* === QR SECTION === */
+.qr-block {
+  text-align: center;
+}
+
+.qr-img {
+  width: 270px;
+  height: 270px;
+  object-fit: contain;
+}
+
+.qr-text {
+  font-size: 12px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+/* === TEXT SECTION === */
+.title {
+  color: #0c3a57;
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #0c3a57;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.details-block p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #333;
+  max-width: 350px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .offering-card {
+    width: 90%;
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .offering-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .details-block p {
+    max-width: 100%;
+  }
+
+  .qr-img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 500px) {
+  .offering-card {
+    padding: 40px 25px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+}
