@@ -63,4 +63,24 @@ export class YoutubeService {
       })
     );
   }
+
+    fetchLiveList(channelId: string): Observable<any[]> {
+      return this.fetchLiveVideos(channelId, 20).pipe(
+        switchMap(liveItems => {
+          if (liveItems.length >= 20) {
+            return of(liveItems);
+          } else {
+            const needed = 20 - liveItems.length;
+            return this.fetchRecentVideos(channelId, needed + liveItems.length).pipe(
+              map(recentItems => {
+                const combined = liveItems.concat(
+                  recentItems.filter(r => !liveItems.some(l => l.id.videoId === r.id.videoId))
+                );
+                return combined.slice(0, 20);
+              })
+            );
+          }
+        })
+      );
+    }
 }

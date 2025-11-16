@@ -1,0 +1,65 @@
+.live-wrapper {
+    width: 80%;
+    padding: 20px 40px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+}
+
+.loading {
+  font-size: 20px;
+  text-align: center;
+  padding: 40px;
+}
+
+.video-grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.video-card {
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.thumb-container {
+  position: relative;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.duration {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 3px 6px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.video-info {
+  margin-top: 10px;
+
+  .title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .meta {
+    font-size: 13px;
+    color: #666;
+  }
+}

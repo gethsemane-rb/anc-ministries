@@ -20,7 +20,7 @@ export class  ServiceTimingComponent {
   tilesPerSlide = 3;
 
   tiles= [
-    { title: 'Tamil-Kannada Service',day: 'Sunday', time: '9:30 AM', image: 'assets/images/schedule/anc_church.jpg' },
+    { title: 'Tamil-Kannada Service',day: 'Sunday', time: '9:30 AM', image: 'assets/images/schedule/church_1.png' },
     { title: 'Sunday school',day: 'Sunday', time: '10:00 AM', image: 'assets/images/schedule/sunday_school.png' },
     { title: 'Telugu-English Service',day: 'Sunday', time: '9:30 AM', image: 'assets/images/schedule/church.png' },
     { title: 'Bible Study',day: 'Wednesday', time: '7:00 PM', image: 'assets/images/schedule/bible_study.png' },

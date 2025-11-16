@@ -1,1 +1,23 @@
-<p>live works!</p>
+<div class="live-wrapper">
+
+  <div *ngIf="loading" class="loading">Loading videos...</div>
+
+  <div class="video-grid" *ngIf="!loading">
+
+    <div *ngFor="let v of videos" class="video-card">
+
+      <div class="thumb-container">
+        <img [src]="v.thumbnail" class="thumbnail" />
+        <span class="duration">23:23</span>
+      </div>
+
+      <div class="video-info">
+        <h4 class="title">{{ v.title }}</h4>
+        <p class="meta"> </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
