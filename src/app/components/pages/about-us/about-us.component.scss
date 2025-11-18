@@ -80,6 +80,7 @@
   max-width: 12rem;
   border-radius: 25px;
   object-fit: cover;
+   box-shadow: 0 2px 8px rgb(0 0 0 / 86%);
 }
 
 /* Button */
@@ -140,6 +141,7 @@
   .ministry-image img {
     max-width: 9rem;
     margin-top: 15px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 86%);
   }
 
   /* Fix weird manual inline positioning */
@@ -165,4 +167,50 @@
   .btn {
     padding: 8px 18px;
   }
+}
+
+
+
+.about-wrapper {
+  width: 100%;
+  text-align: center;
+  padding: 50px 20px;
+  margin-bottom: 5rem;
+}
+
+.about-title {
+  color: #333;
+  margin-bottom: 6rem;
+  font-size: 2rem;
+}
+
+.content-section {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.image-box img {
+  width: clamp(200px, 30vw, 260px);
+  height: clamp(200px, 30vw, 260px);
+  border-radius: 40px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 86%);
+}
+
+.text-box {
+  width: 70%;
+  text-align: left;
+}
+
+.founder-title {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.founder-text {
+  color: #333;
+  line-height: 1.6;
 }

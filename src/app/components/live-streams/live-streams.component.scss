@@ -1,7 +1,7 @@
  .section{padding:48px 0;}
  .streams-grid{display:flex;gap:18px;}
 
- .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;width: max-content;}
+ .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;width: max-content;border: 0px;box-shadow: 0 2px 8px rgb(203 211 212 / 79%);}
 
  .livestream{display:flex;flex-direction:column;gap:12px;}
  .livestream .thumb{width:100%;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#eee;display:block;}
@@ -10,15 +10,6 @@
 .view-more{
 margin-top: 2rem;
 }
-.arrow {
-  border: solid #000;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 6px;
-  margin-left: 6px;
-}
 
-.down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
+
+

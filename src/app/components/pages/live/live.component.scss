@@ -3,8 +3,22 @@
     padding: 20px 40px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 5%;
 }
+.ministries-section {
+  position: relative;
+  background: url('/assets/images/workship_bg.png') center/cover no-repeat;
+  padding: 60px 0;
+  color: #1e1e1e;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(50, 0, 90, 0.7);
+  z-index: 0;
+}
+
 
 .loading {
   font-size: 20px;
@@ -62,4 +76,10 @@
     font-size: 13px;
     color: #666;
   }
+}
+.about-title {
+  color: #333;
+  margin-bottom: 6rem;
+  font-size: 2rem;
+  text-align: center;
 }
