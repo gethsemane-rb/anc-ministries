@@ -1,3 +1,19 @@
+.ministries-section {
+  position: relative;
+  background: url('/assets/images/workship_bg.png') center/cover no-repeat;
+  padding: 60px 0;
+  color: #1e1e1e;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(50, 0, 90, 0.7);
+  z-index: 0;
+}
+
+
 .offering-section {
   width: 100%;
   position: relative;
@@ -19,7 +35,7 @@
   width: 85%;
   background: #ffffff;
   margin: -140px auto 0 auto;
-  border-radius: 150px 150px 0 0;
+  border-radius: 150px;
   padding: 80px 60px;
   box-shadow: 0 6px 25px rgba(0,0,0,0.15);
 }

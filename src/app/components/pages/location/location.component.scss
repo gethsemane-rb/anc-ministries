@@ -7,7 +7,20 @@ padding: 40px 80px;
     margin-left: auto;
     margin-right: auto;
 }
+.ministries-section {
+  position: relative;
+  background: url('/assets/images/workship_bg.png') center/cover no-repeat;
+  padding: 60px 0;
+  color: #1e1e1e;
+}
 
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(50, 0, 90, 0.7);
+  z-index: 0;
+}
 
 .left-section {
 width: 50%;
